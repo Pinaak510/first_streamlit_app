@@ -1,7 +1,7 @@
 import streamlit, pandas, requests, snowflake.connector
 from urllib.error import URLError
 
-streamlit.title('My Parents New Healthy Diner')
+streamlit.title('View our Fruit List-Add your favourites!')
 
 streamlit.header('Breakfast Favorites')
 
@@ -54,8 +54,6 @@ def get_fruit_load_list():
     my_cur.execute("SELECT * FROM FRUIT_LOAD_LIST")
 
     return my_cur.fetchall()
-  
-streamlit.title('View our Fruit List-Add your favourites!')
   
 if streamlit.button('Get Fruit List'):
   
